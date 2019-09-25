@@ -4,7 +4,7 @@ Deep Adversarial Learning for Multi-Modality Missing Data Completion can be used
 
 Detailed informationis provided in [paper] (https://dl.acm.org/citation.cfm?id=3219963).
 
-![model](./utils/data.pdf)
+![model](./utils/data.jpg)
 
 ## Citation
 
