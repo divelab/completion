@@ -4,10 +4,7 @@ import argparse
 import tensorflow as tf
 from network import Generator
 
-"""
-This file provides configuration to build U-NET for semantic segmentation.
 
-"""
 dir = '/tempspace/lcai/GAN/Data/data/'
 
 def configure():
