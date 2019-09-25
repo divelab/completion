@@ -87,7 +87,7 @@ network_depth: how deep of the U-Net including the bottom layer
 
 start_channel_num: the number of channel for the first conv layer
 
-## Training and Testing
+## Training
 
 #### Start training
 
