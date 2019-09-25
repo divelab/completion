@@ -60,9 +60,9 @@ def configure():
 def main(_):
     parser = argparse.ArgumentParser()
     parser.add_argument('--option', dest='option', type=str, default='train',
-                        help='actions: train, test, or predict')
+                        help='actions: train')
     args = parser.parse_args()
-    if args.option not in ['train', 'test', 'predict','get_classify']:
+    if args.option not in ['train']:
         print('invalid option: ', args.option)
         print("Please input a option: train, test, or predict")
     else:
