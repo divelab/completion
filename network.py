@@ -256,6 +256,24 @@ class Generator(object):
                 print('----training g loss', loss)
             iteration = train_reader.iter + self.conf.reload_step
             epoch_num += 1
+    def test(self):
+        print('---->predicting ', self.conf.test_step)
+        if self.conf.test_step > 0:
+            self.reload(self.conf.test_step)
+        else:
+            print("please set a reasonable test_step")
+            return
+        data_mri, label = load_data('test_data.mat')
+        predictions = []
+        for i in range(int(data_mri.shape[0]/self.conf.batch)):
+            print(i ," in ", int(data_mri.shape[0]/self.conf.batch))
+            inputs = np.reshape(data_mri[i*self.conf.batch:i*self.conf.batch+self.conf.batch], self.input_shape)
+            annotations = np.reshape(data_mri[i*self.conf.batch:i*self.conf.batch+self.conf.batch], self.input_shape)
+            feed_dict = {self.inputs: inputs, self.labels: annotations}
+            predictions.append(self.sess.run(
+                self.predictions, feed_dict=feed_dict))
+        predictions = np.concatenate(predictions,axis=0)
+        np.savez("samples_unet"+str(self.conf.test_step),predictions)
 
     def save(self, step):
         print('---->saving', step)
