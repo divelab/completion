@@ -1,6 +1,6 @@
 # Deep Adversarial Learning for Multi-Modality Missing Data Completion
 
-![description](./utils/data.jpg)
+![model](./utils/data.jpg)
 
 Deep Adversarial Learning for Multi-Modality Missing Data Completion can be used to generate missing modality using the existing modality. 
 
