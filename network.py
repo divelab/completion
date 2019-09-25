@@ -6,13 +6,6 @@ from utils.img_utils import imsave
 from utils import ops
 
 
-"""
-This module builds a standard U-NET for semantic segmentation.
-If want VAE using pixelDCL, please visit this code:
-https://github.com/HongyangGao/UVAE
-"""
-
-
 class Generator(object):
 
     def __init__(self, sess, conf):
