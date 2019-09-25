@@ -96,6 +96,6 @@ After configure the network, we can start to train. Run
 python main.py
 ```
 
-#### Acknowledge
+## Acknowledgments
 
 Part of code borrows from [PixelDCL](https://github.com/HongyangGao/PixelDCN). Thanks for their excellent work!
