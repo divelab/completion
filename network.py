@@ -256,6 +256,7 @@ class Generator(object):
                 print('----training g loss', loss)
             iteration = train_reader.iter + self.conf.reload_step
             epoch_num += 1
+            
     def test(self):
         print('---->predicting ', self.conf.test_step)
         if self.conf.test_step > 0:
